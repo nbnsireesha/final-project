@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'ld_ozregular';
+  src: url("ld_oz_fn-webfont.woff2") format("woff2"), url("ld_oz_fn-webfont.woff") format("woff"), url("ld_oz_fn.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+button.btn-test,
+.btn-test:hover,
+.btn-test:active,
+.btn-test:visited,
+.btn-stestfocus {
+  font-family: 'Nanum Myeongjo', serif;
+  background-color: #b31e3f;
+  border-color: #b31e3f;
+  color: white;
+  margin-right: 5px; }
+  button.btn-test:hover,
+  .btn-test:hover:hover,
+  .btn-test:active:hover,
+  .btn-test:visited:hover,
+  .btn-stestfocus:hover {
+    background: #c92247; }
+
+.navbar-brand, .nav-link {
+  font-family: 'Nanum Myeongjo', serif; }
+
+div.card-header.bg-test {
+  background-color: #b31e3f; }
+
+h3, h4 {
+  font-family: 'Nanum Myeongjo', serif; }
+
+button.btn.btn-outline-dark.answer-btn {
+  color: #b31e3f;
+  border-color: #b31e3f;
+  font-family: 'Nanum Myeongjo', serif;
+  margin: 10px; }
+  button.btn.btn-outline-dark.answer-btn:hover {
+    background: #c92247;
+    color: white; }
+
+h1 {
+  font-family: 'ld_ozregular', Arial, sans-serif;
+  font-size: 60px; }

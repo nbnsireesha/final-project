@@ -1,0 +1,57 @@
+@import "Variables";
+@import "Font";
+@import "Mixins";
+
+// Navbar
+button.btn-test,
+  .btn-test:hover,
+  .btn-test:active,
+  .btn-test:visited,
+  .btn-stestfocus {
+      @include allOtherFont;
+      background-color: $rubyRed;
+      border-color: $rubyRed;
+      color: white;
+      margin-right: 5px;
+      &:hover {
+        background: lighten($rubyRed, 5);
+      }
+  }
+
+  .navbar-brand, .nav-link { 
+    @include allOtherFont;
+  }
+// End of Navbar
+
+// Card
+div.card-header.bg-test {
+  background-color: $rubyRed;
+}
+
+h3, h4 {
+  @include allOtherFont;
+}
+// End of Card
+
+// Question Page
+button.btn.btn-outline-dark.answer-btn {
+  color: $rubyRed;
+  border-color: $rubyRed;
+  @include allOtherFont;
+  margin: 10px;
+  &:hover {
+    background: lighten($rubyRed, 5);
+    color: white;
+  }
+}
+
+// div.background {
+//   background: url("./img/yellow_brick_road.png")
+// }
+
+// Fonts
+h1 {
+  font-family: 'ld_ozregular', Arial, sans-serif;
+  font-size: 60px;
+}
+
