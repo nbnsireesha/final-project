@@ -1,9 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-// const routes = require("./routes/userRoutes");
+const routes = require("./routes/userRoutes");
 const dbConnection = require('./server/db');
-const passport = require('./server/passport');
+// const passport = require('./server/passport');
+const passport = require('passport');
 const morgan = require('morgan');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session); 
@@ -16,10 +17,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
-app.use(express.static("client/public"));
+// app.use(express.static("./client/public"));
 // Add routes, both API and view
-// app.use(routes);
-app.use('/auth', require('./server/auth'));
+
 
 app.use(
 	session({
@@ -33,6 +33,9 @@ app.use(
 // ===== Passport ====
 app.use(passport.initialize());
 app.use(passport.session());// will call the deserializeUser
+
+app.use(routes);
+app.use('/auth', require('./server/auth'));
 
 // ====== Error handler ====
 app.use(function(err, req, res, next) {
